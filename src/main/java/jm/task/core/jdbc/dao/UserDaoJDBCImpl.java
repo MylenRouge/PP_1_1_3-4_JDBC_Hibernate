@@ -46,7 +46,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try (Connection connection = Util.getConnection();){
             connection.setAutoCommit(false);
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setInt(1, 0); // Здесь нужно указать значение для id
+            statement.setInt(1, 0);
             statement.setString(2, name);
             statement.setString(3, lastName);
             statement.setByte(4, age);
